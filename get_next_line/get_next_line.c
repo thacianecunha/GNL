@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tcunha <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/17 10:53:11 by tcunha            #+#    #+#             */
+/*   Updated: 2020/10/17 10:59:28 by tcunha           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 static char		*clean_buff(char *text)
@@ -92,10 +104,10 @@ static char		*read_append(int fd, char *text, char *tmp)
 	return (text);
 }
 
-int			get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)
 {
 	int		ret;
-	char		tmp[BUFFER_SIZE + 1];
+	char	tmp[BUFFER_SIZE + 1];
 	static char	*text;
 
 	if (!line
